@@ -123,7 +123,7 @@ contract SupplyChain {
   {
       items[sku].state = State.Sold;
       items[sku].buyer = msg.sender;
-      items[sku].seller.transfer(msg.value);
+      items[sku].seller.transfer(items[sku].price);
       emit LogSold(sku);
   }
 
