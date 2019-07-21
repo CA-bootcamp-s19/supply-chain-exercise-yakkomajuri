@@ -114,10 +114,10 @@ contract SupplyChain {
     if the buyer paid enough, and check the value after the function is called to make sure the buyer is
     refunded any excess ether sent. Remember to call the event associated with this function!*/
 
-  function buyItem(uint sku, uint _price)
+  function buyItem(uint sku)
     public
     payable
-    paidEnough(_price)
+    paidEnough(msg.value)
     forSale(sku)
     checkValue(sku)
   {
