@@ -14,5 +14,4 @@ script:
   - sleep 5
   - truffle test
   
-  os: osx
 
